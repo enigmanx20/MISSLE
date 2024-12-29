@@ -53,7 +53,7 @@ missle_probs = missle.predict_proba(np.stack([clam_prob, nomogram_prob], axis=1)
 
 1. Create patches and embeddings (ResNet50trunc or UNI) on the melanoma WSIs according to the [CLAM](https://github.com/mahmoodlab/CLAM/tree/master) instruction. Calculate the clinical nomogram probablities at [https://www.mskcc.org/nomograms/melanoma/sentinel_lymph_node_metastasis](https://www.mskcc.org/nomograms/melanoma/sentinel_lymph_node_metastasis).
 
-   Our snippet for patchfying is here.
+   Our snippet for patchfying the whole tissue region is here.
    `python create_patches_fp.py --source /YOUR_WSI_FOLDER --save_dir /YOUR_PATCH_FOLDER --patch_size 256 --seg --patch --stich --preset ./presets/tcga.csv`
 
    When applying XML annotation files created with [ASAP](https://github.com/computationalpathologygroup/ASAP), use the following command instead of `create_patches_fp.py`. Annotation files should be located as the following.
